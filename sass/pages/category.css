@@ -1,7 +1,105 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 150px 1fr 150px;
-      grid-template-columns: 150px 1fr 150px;
+  -ms-grid-columns: 15% 1fr 15%;
+      grid-template-columns: 15% 1fr 15%;
+  height: 100vh;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 15% 1fr 1fr;
+      grid-template-rows: 15% 1fr 1fr;
+  grid-gap: 3px;
+}
+
+.main header {
+  grid-column: span 3;
+}
+
+.main .cat {
+  background-color: #F5F5F5;
+}
+
+.cat1 {
+  background-image: url("../../images/cat1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.cat2 {
+  background-image: url("../../images/cat2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.cat3 {
+  background-image: url("../../images/cat3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.cat4 {
+  background-image: url("../../images/cat10.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.cat5 {
+  background-image: url("../../images/cat8.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.cat6 {
+  background-image: url("../../images/cat9.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
 }
 /*# sourceMappingURL=category.css.map */

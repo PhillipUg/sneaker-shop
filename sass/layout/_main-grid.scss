@@ -1,0 +1,10 @@
+@import '../utilities/variables';
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: $grid-gap;
+  .tall-img{
+      grid-row: span 2;
+    }
+}

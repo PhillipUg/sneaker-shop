@@ -1,1 +1,56 @@
-@import '../layout/grid';
+@import '../base/reset';
+
+@import '../layout/grid', '../layout/product-grid';
+@import '../utilities/variables', '../utilities/mixins';
+
+
+.main {
+  .top-figs {
+    
+    .cat1 {
+    @include bg-img(url('../../images/cat4.png'), 80%);
+    }
+    .cat2 {
+    @include bg-img(url('../../images/cat5.png'), 80%);
+      
+    }
+    .cat3 {
+    @include bg-img(url('../../images/cat4.png'), 80%);
+      
+    }
+    .cat4 {
+    @include bg-img(url('../../images/cat6.png'), 80%);
+      
+    }
+  }
+  .btm-figs {
+    .item-details {
+      article {
+      background-color: $light-grey;
+        &:last-child {
+          background-color: $white;
+          div {
+            background-color: $light-grey;
+          }
+        }
+      }
+    }
+    .item-img {
+      background-color: $white;
+      .cat5 {
+        @include bg-img(url('../../images/cat6.png'), 60%);
+      }
+     article {
+       background-color: $white;
+       div {
+        &:first-child {
+          background-color: $light-grey;
+        }
+        }
+     }
+    }
+  }
+}
+.cat {
+      background-color: $light-grey;
+    }

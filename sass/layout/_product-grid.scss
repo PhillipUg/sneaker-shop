@@ -1,0 +1,41 @@
+@import '../utilities/variables';
+
+.main {
+  display: grid;
+  grid-template-rows: 30% 1fr;
+  grid-gap: $grid-gap;
+  .top-figs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $grid-gap;   
+  }
+  .btm-figs {
+    display: grid;
+    grid-template-columns: 33% 1fr;
+    grid-gap: $grid-gap;
+
+    .item-details {
+      display: grid;
+      grid-template-rows: 20% 15% 1fr 14%;
+      grid-gap: $grid-gap;
+      article {
+        &:last-child {
+          display: grid;
+          grid-template-columns: 20% 1fr;
+          grid-gap: $grid-gap;
+        }
+      }
+    }
+    .item-img {
+      display: grid;
+      grid-template-rows: 85% 1fr;
+      article {
+        display: grid;
+        grid-template-columns: 70% 1fr 1fr;
+        
+      }
+    }
+  }
+}
+
+

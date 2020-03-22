@@ -1,0 +1,10 @@
+@import '../utilities/variables';
+
+.main {
+  display: grid;
+  grid-template-rows: 15% 1fr 1fr;
+  grid-gap: $grid-gap;
+  header {
+    grid-column: span 3;
+  }
+}

@@ -1,1 +1,23 @@
+@import 'sass/base/reset';
+
 @import 'sass/layout/grid';
+@import 'sass/layout/main-grid';
+
+
+
+.main {
+  .tall-img {
+      background-image: url('images/home-tall.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .short-img {
+      background-color: $light-grey;
+      background-image: url('images/home-short2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-position-y: 80%;
+    }
+}

@@ -1,0 +1,8 @@
+@mixin bg-img($url, $size){
+  background: {
+    image: $url;
+    repeat: no-repeat;
+    position: center;
+    size: $size;
+  }
+}
