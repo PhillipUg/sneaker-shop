@@ -1,0 +1,24 @@
+{
+  "name": "sneaker-shop",
+  "version": "1.0.0",
+  "description": "[HTML &amp; CSS capstone project: Sneakers shop](https://www.notion.so/HTML-CSS-capstone-project-Sneakers-shop-a3c5d4e66fa54d599464cbf1449d46d2)",
+  "main": "stylelint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhillipUg/sneaker-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhillipUg/sneaker-shop/issues"
+  },
+  "homepage": "https://github.com/PhillipUg/sneaker-shop#readme",
+  "dependencies": {
+    "stylelint": "^13.2.1",
+    "stylelint-config-recommended": "^3.0.0"
+  }
+}

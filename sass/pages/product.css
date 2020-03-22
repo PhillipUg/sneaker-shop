@@ -1,0 +1,7 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 150px 1fr 150px;
+      grid-template-columns: 150px 1fr 150px;
+}
+/*# sourceMappingURL=product.css.map */
