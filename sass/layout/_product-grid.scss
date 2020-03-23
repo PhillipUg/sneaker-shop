@@ -47,32 +47,26 @@
   .main {
   display: grid;
   grid-row: 2;
-  grid-template-areas:
-  'top-figs top-figs btm-figs btm-figs btm-figs btm-figs'
-  'top-figs top-figs btm-figs btm-figs btm-figs btm-figs'
-  'top-figs top-figs btm-figs btm-figs btm-figs btm-figs';
+  grid-template-rows: 1fr;
+  grid-template-columns: 35% 1fr;
   .top-figs {
-    grid-area: top-figs;
+    // grid-area: top-figs;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     grid-auto-flow: column;
   }
   .btm-figs {
-    grid-area: btm-figs;
+    // grid-area: btm-figs;
     display: grid;
-    grid-template-areas: 
-    'img img img'
-    'details details details';
-    .item-details {
-      grid-area: details;
-    }
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 1fr;
     .item-img {
-      grid-area: img;
+      grid-row: 1;
+      // min-height: 15em;
       article {
         display: grid;
         grid-template-columns: 1fr;
-        border: 1px solid black;
       }
       .prev {
         display: none;
@@ -89,7 +83,7 @@
   .main {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-areas:'btm-figs';
+  grid-template-columns: 1fr;
   .top-figs {
     display: none;   
   }

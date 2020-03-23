@@ -138,14 +138,14 @@ ul {
 .nav .logo {
   font-family: "helvetica bold";
   font-size: 18px;
-  font-font-weight: 800;
+  font-weight: 800;
   color: #313131;
 }
 
 .nav .top-list {
   font-family: "helvetica medium";
   font-size: 14px;
-  font-font-weight: 500;
+  font-weight: 500;
   color: #313131;
 }
 
@@ -156,7 +156,7 @@ ul {
 .nav .menu {
   font-family: "helvetica medium";
   font-size: 14px;
-  font-font-weight: 500;
+  font-weight: 500;
   color: #313131;
 }
 
@@ -167,7 +167,7 @@ ul {
 .nav .btm-list {
   font-family: "helvetica medium";
   font-size: 12px;
-  font-font-weight: 500;
+  font-weight: 500;
   color: #313131;
 }
 
@@ -193,7 +193,7 @@ ul {
 .aside .icons {
   font-family: "helvetica medium";
   font-size: 14px;
-  font-font-weight: 500;
+  font-weight: 500;
   color: #313131;
   margin-top: 2em;
   height: 20%;
@@ -235,7 +235,7 @@ ul {
 .aside .hr-list {
   font-family: "helvetica medium";
   font-size: 12px;
-  font-font-weight: 500;
+  font-weight: 500;
   color: #313131;
   height: 25%;
   margin-right: 10px;
@@ -264,8 +264,8 @@ ul {
 
 .aside .scroll {
   font-family: "helvetica medium";
-  font-size: 14px;
-  font-font-weight: 500;
+  font-size: 12px;
+  font-weight: 500;
   color: #313131;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -300,9 +300,9 @@ ul {
 }
 
 .home-title {
-  font-family: "helvetica medium";
+  font-family: "helvetica bold";
   font-size: 24px;
-  font-font-weight: 800;
+  font-weight: 800;
   color: #313131;
   padding-left: 50px;
   display: -webkit-box;
@@ -325,7 +325,7 @@ ul {
 .home-title span {
   font-family: "helvetica medium";
   font-size: 14px;
-  font-font-weight: 500;
+  font-weight: 500;
   color: #313131;
   display: inline-block;
   margin-top: auto;
@@ -351,7 +351,7 @@ ul {
   .header {
     font-family: "helvetica bold";
     font-size: 18px;
-    font-font-weight: 800;
+    font-weight: 800;
     color: #313131;
     display: block;
     display: -webkit-box;
@@ -365,7 +365,6 @@ ul {
   .header p {
     display: block;
     width: 5em;
-    border: 1px solid red;
     overflow: hidden;
   }
   .header p:last-child {

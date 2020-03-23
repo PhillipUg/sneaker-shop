@@ -1,4 +1,21 @@
+@font-face {
+  font-family: "helvetica medium";
+  src: url("./assets/fonts/HelveticaNeueMed.ttf");
+}
+
+@font-face {
+  font-family: "helvetica bold";
+  src: url("./assets/fonts/HelveticaNeueCondBold.ttf");
+}
+
+@font-face {
+  font-family: "helvetica regular";
+  src: url("./assets/fonts/HelveticaNeueReg.ttf");
+}
+
+
 @import '../utilities/variables';
+
 
 .main {
   display: grid;
@@ -37,7 +54,6 @@
     }
   }
     .header {
-      // display: none;
       grid-row: 1;
     }
   }
@@ -50,19 +66,8 @@
     
     .main-items {
     display: grid;
-    // grid-row: 2;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(minmax(300px 1fr));
-    // grid-gap: $grid-gap;
-    // overflow-y: scroll;
-    // scrollbar-width: none;
-    // &::-webkit-scrollbar {
-    //   display: none;
-    // }
   }
-    .header {
-      // display: none;
-      // grid-row: 1;
-    }
   }
 }

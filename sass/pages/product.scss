@@ -1,53 +1,155 @@
 @import '../base/reset';
-
 @import '../layout/grid', '../layout/product-grid';
-@import '../utilities/variables', '../utilities/mixins';
+@import '../utilities/variables', '../utilities/mixins', '../utilities/components';
 
 
+
+.header {
+  display: none;
+}
 .main {
   .top-figs {
-    
     .cat1 {
-    @include bg-img(url('../../assets/images/cat4.png'), 80%);
+      @include bg-img(url('../../assets/images/cat4.png'), 80%);
     }
+
     .cat2 {
-    @include bg-img(url('../../assets/images/cat5.png'), 80%);
-      
+      @include bg-img(url('../../assets/images/cat5.png'), 80%);
     }
+
     .cat3 {
-    @include bg-img(url('../../assets/images/cat4.png'), 80%);
-      
+      @include bg-img(url('../../assets/images/cat4.png'), 80%);
     }
+
     .cat4 {
-    @include bg-img(url('../../assets/images/cat6.png'), 80%);
-      
+      @include bg-img(url('../../assets/images/cat6.png'), 80%);
     }
   }
+
   .btm-figs {
-    .item-details {
+    .item-img {
+      background-color: $white;
+
+      .cat5 {
+        @include bg-img(url('../../assets/images/cat6.png'), 60%);
+        position: relative;
+        span {
+          position: absolute;
+          top: 1em;
+          right: 2em;
+        }
+      }
+
       article {
-      background-color: $light-grey;
-        &:last-child {
-          background-color: $white;
-          div {
+        background-color: $white;
+        text-align: center;
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include my-font(bold, 14px, 700);
+          &:first-child {
             background-color: $light-grey;
           }
         }
       }
     }
-    .item-img {
-      background-color: $white;
-      .cat5 {
-        @include bg-img(url('../../assets/images/cat6.png'), 60%);
+
+    .item-details {
+      article {
+        background-color: $light-grey;
+
+        &:last-child {
+          background-color: $white;
+
+          div {
+            background-color: $light-grey;
+          }
+        }
       }
-     article {
-       background-color: $white;
-       div {
-        &:first-child {
-          background-color: $light-grey;
+      .details-title {
+        display: flex;
+        div {
+          padding-left: 1em;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          span {
+            &:first-child{
+              @include my-font(bold, 14px, 700);
+
+            }
+            &:last-child {
+              @include my-font(medium, 14px, 100);
+              color: $grey;
+            }
+          }
         }
+        .price {
+          @include my-font(bold, 14px, 700);
+          margin: auto 0.8em;
+          margin-left: auto;
         }
-     }
+      }
+      .details-list {
+        @include my-font(bold, 14px, 700);
+        color: $grey;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        height: 100%;
+        li{
+          flex: 1;
+          display: inline-block;
+          &:nth-child(4){
+            color: $black;
+          }
+        }
+      }
+      .details-article {
+        overflow: hidden;
+      }
+      .details {
+        @include my-font(bold, 14px, 700);
+        display: inline-block;
+        padding-left: 1em;
+        margin-top: 1em;
+      }
+      .details-para {
+        @include my-font(medium, 12px, 100);
+        
+        padding: 1em 3em 0 1em;
+       
+      }
+      .details-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+      }
+      .details-cart {
+        @include my-font(bold, 14px, 700);
+         display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
+}
+
+@media (max-width:1024px){
+  .header {
+  display: flex;
+  align-items: center;
+  .logo {
+    @include my-font(bold, 18px, 800);
+    display: inline-block;
+    margin-left: 1em;
+  }
+  .icon-bars {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 1em;
+  }
+}
 }

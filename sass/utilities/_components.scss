@@ -100,7 +100,7 @@
     }
   }
   .scroll {
-    @include my-font(medium, 14px, 500);
+    @include my-font(medium, 12px, 500);
 
     transform: rotate(90deg);
     align-self: end;
