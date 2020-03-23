@@ -1,23 +1,120 @@
 @import 'sass/base/reset';
 
-@import 'sass/layout/grid';
-@import 'sass/layout/main-grid';
+@import 'sass/layout/grid', 'sass/layout/main-grid';
+@import './sass/utilities/mixins', './sass/utilities/variables', './sass/utilities/components';
 
 
+.header {
+  display: none;
+}
 
-.main {
   .tall-img {
-      background-image: url('images/home-tall.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      @include bg-img(url('./assets/images/home-tall.jpg'), cover);
     }
-    .short-img {
-      background-color: $light-grey;
-      background-image: url('images/home-short2.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+
+  .short-img {
+      @include bg-img(url('./assets/images/home-short2.jpg'), cover);
+      background-position-y: 80%;
+      min-height: 200px;
+    }
+
+  
+.home-title {
+  @include my-font(medium, 24px, 800);
+  
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  p{
+    padding-top: 10px;
+    &:first-child {
+      padding-top: 50px;
+    }
+  }
+  span {
+  @include my-font(medium, 14px, 500);
+
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+}
+
+
+    @media screen and (max-width:1024px){
+      .main {
+        position: relative;
+        .home-title {
+          background-color: $white;
+          height: 40%;
+          width: 45%;  
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+        }
+       .short-img {
+          display: none;
+         }
+      }
+      .header {
+        @include my-font(bold, 18px, 800);
+
+        display: block;
+        display: flex;
+        align-items: center;
+        margin: 0 2em;
+        p {
+           display: block;
+           width: 5em;
+           border: 1px solid red;
+           overflow: hidden;
+          &:last-child {
+            width: 1em;
+            margin-left: auto;
+            text-align: end;
+          }
+  }
+      }
+
+      .tall-img {
+      @include bg-img(url('./assets/images/home-tall.jpg'), cover);
+    }
+
+      .short-img {
+      @include bg-img(url('./assets/images/home-short2.jpg'), cover);
       background-position-y: 80%;
     }
-}
+    }
+
+
+    @media screen and (max-width:768px){
+      .main {
+        position: relative;
+        .home-title {
+          background-color: $white;
+          height: 30%;
+          width: 100%;  
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+        }
+       .short-img {
+          display: none;
+         }
+      
+      }
+      .header {
+        height:8vh;
+      }
+
+        .tall-img {
+      @include bg-img(url('./assets/images/home-tall.jpg'), cover);
+    }
+
+      .short-img {
+      @include bg-img(url('./assets/images/home-short2.jpg'), cover);
+      background-position-y: 80%;
+    }
+    }

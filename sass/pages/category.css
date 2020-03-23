@@ -2,6 +2,13 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,6 +38,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  overflow: hidden;
 }
 
 ul {
@@ -40,66 +48,155 @@ ul {
 .container {
   display: -ms-grid;
   display: grid;
+  height: 100vh;
+  width: 100vw;
   -ms-grid-columns: 15% 1fr 15%;
       grid-template-columns: 15% 1fr 15%;
-  height: 100vh;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .container .nav {
+    display: none;
+  }
+  .container .aside {
+    display: none;
+  }
 }
 
 .main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 15% 1fr 1fr;
-      grid-template-rows: 15% 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 10% 1fr;
+      grid-template-rows: 10% 1fr;
+  overflow: hidden;
+}
+
+.main .header {
+  grid-column: 1/-1;
+}
+
+.main .main-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   grid-gap: 3px;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 
-.main header {
-  grid-column: span 3;
+.main .main-items::-webkit-scrollbar {
+  display: none;
 }
 
-.main .cat {
-  background-color: #F5F5F5;
+@media screen and (max-width: 1024px) {
+  .main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 7vh 1fr;
+        grid-template-rows: 7vh 1fr;
+  }
+  .main .main-items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+  .main .main-items::-webkit-scrollbar {
+    display: none;
+  }
+  .main .header {
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .main .main-items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: ()[minmax];
+        grid-template-rows: repeat(minmax(300px 1fr));
+  }
+}
+
+.cat {
+  min-height: 200px;
+  min-width: 200px;
 }
 
 .cat1 {
-  background-image: url("../../images/cat1.png");
+  background-image: url("../../assets/images/cat1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
+  background-color: #F5F5F5;
 }
 
 .cat2 {
-  background-image: url("../../images/cat2.png");
+  background-image: url("../../assets/images/cat2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
+  background-color: #F5F5F5;
 }
 
 .cat3 {
-  background-image: url("../../images/cat3.png");
+  background-image: url("../../assets/images/cat3.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
+  background-color: #F5F5F5;
 }
 
 .cat4 {
-  background-image: url("../../images/cat10.png");
+  background-image: url("../../assets/images/cat10.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
+  background-color: #F5F5F5;
 }
 
 .cat5 {
-  background-image: url("../../images/cat8.png");
+  background-image: url("../../assets/images/cat8.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
+  background-color: #F5F5F5;
 }
 
 .cat6 {
-  background-image: url("../../images/cat9.png");
+  background-image: url("../../assets/images/cat9.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
+  background-color: #F5F5F5;
 }
 /*# sourceMappingURL=category.css.map */

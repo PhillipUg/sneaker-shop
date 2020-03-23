@@ -1,8 +1,20 @@
-@mixin bg-img($url, $size){
+@import './variables';
+
+@mixin bg-img($url, $size:100%){
   background: {
     image: $url;
     repeat: no-repeat;
     position: center;
     size: $size;
+    color: $light-grey;
   }
+}
+
+@mixin my-font($bold-or-medium, $size, $weight){
+  font: {
+    family: "helvetica #{$bold-or-medium}";
+    size: $size;
+    font-weight: $weight;
+    }
+  color: $black;
 }

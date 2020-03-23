@@ -8,18 +8,18 @@
   .top-figs {
     
     .cat1 {
-    @include bg-img(url('../../images/cat4.png'), 80%);
+    @include bg-img(url('../../assets/images/cat4.png'), 80%);
     }
     .cat2 {
-    @include bg-img(url('../../images/cat5.png'), 80%);
+    @include bg-img(url('../../assets/images/cat5.png'), 80%);
       
     }
     .cat3 {
-    @include bg-img(url('../../images/cat4.png'), 80%);
+    @include bg-img(url('../../assets/images/cat4.png'), 80%);
       
     }
     .cat4 {
-    @include bg-img(url('../../images/cat6.png'), 80%);
+    @include bg-img(url('../../assets/images/cat6.png'), 80%);
       
     }
   }
@@ -38,7 +38,7 @@
     .item-img {
       background-color: $white;
       .cat5 {
-        @include bg-img(url('../../images/cat6.png'), 60%);
+        @include bg-img(url('../../assets/images/cat6.png'), 60%);
       }
      article {
        background-color: $white;
@@ -51,6 +51,3 @@
     }
   }
 }
-.cat {
-      background-color: $light-grey;
-    }

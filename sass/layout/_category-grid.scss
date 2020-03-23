@@ -2,9 +2,67 @@
 
 .main {
   display: grid;
-  grid-template-rows: 15% 1fr 1fr;
-  grid-gap: $grid-gap;
-  header {
-    grid-column: span 3;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 1fr;
+  overflow: hidden; 
+  .header {
+    grid-column: 1/-1;
+  }
+  .main-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $grid-gap;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7vh 1fr;
+    .main-items {
+    display: grid;
+    grid-row: 2;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $grid-gap;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+    .header {
+      // display: none;
+      grid-row: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+   .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    .main-items {
+    display: grid;
+    // grid-row: 2;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(minmax(300px 1fr));
+    // grid-gap: $grid-gap;
+    // overflow-y: scroll;
+    // scrollbar-width: none;
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+  }
+    .header {
+      // display: none;
+      // grid-row: 1;
+    }
   }
 }

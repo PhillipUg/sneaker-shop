@@ -2,6 +2,13 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,6 +38,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  overflow: hidden;
 }
 
 ul {
@@ -40,16 +48,40 @@ ul {
 .container {
   display: -ms-grid;
   display: grid;
+  height: 100vh;
+  width: 100vw;
   -ms-grid-columns: 15% 1fr 15%;
       grid-template-columns: 15% 1fr 15%;
-  height: 100vh;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .container .nav {
+    display: none;
+  }
+  .container .aside {
+    display: none;
+  }
+}
+
+.header {
+  display: none;
 }
 
 .main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   grid-gap: 3px;
 }
 
@@ -57,19 +89,340 @@ ul {
   grid-row: span 2;
 }
 
-.main .tall-img {
-  background-image: url("images/home-tall.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+@media screen and (max-width: 1024px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 7vh 1fr;
+        grid-template-rows: 7vh 1fr;
+  }
+  .main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 30%;
+        grid-template-rows: 1fr 30%;
+  }
 }
 
-.main .short-img {
-  background-color: #F5F5F5;
-  background-image: url("images/home-short2.jpg");
-  background-size: cover;
-  background-position: center;
+@font-face {
+  font-family: "helvetica medium";
+  src: url("./assets/fonts/HelveticaNeueMed.ttf");
+}
+
+@font-face {
+  font-family: "helvetica bold";
+  src: url("./assets/fonts/HelveticaNeueCondBold.ttf");
+}
+
+@font-face {
+  font-family: "helvetica regular";
+  src: url("./assets/fonts/HelveticaNeueReg.ttf");
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2em 0 2em 2em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav .logo {
+  font-family: "helvetica bold";
+  font-size: 18px;
+  font-font-weight: 800;
+  color: #313131;
+}
+
+.nav .top-list {
+  font-family: "helvetica medium";
+  font-size: 14px;
+  font-font-weight: 500;
+  color: #313131;
+}
+
+.nav .top-list li {
+  padding: 10px 0;
+}
+
+.nav .menu {
+  font-family: "helvetica medium";
+  font-size: 14px;
+  font-font-weight: 500;
+  color: #313131;
+}
+
+.nav .menu .fa-bars {
+  margin-right: 10px;
+}
+
+.nav .btm-list {
+  font-family: "helvetica medium";
+  font-size: 12px;
+  font-font-weight: 500;
+  color: #313131;
+}
+
+.nav .btm-list li {
+  padding: 8px 0;
+}
+
+.aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+  padding-right: 1.5em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.aside .icons {
+  font-family: "helvetica medium";
+  font-size: 14px;
+  font-font-weight: 500;
+  color: #313131;
+  margin-top: 2em;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.aside .icons span {
+  display: inline-block;
+}
+
+.aside .icons span:last-child {
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  background-color: #313131;
+  margin-left: 20px;
+}
+
+.aside .icons .fa-search {
+  margin-right: 10px;
+}
+
+.aside .icons .fa-user {
+  margin-right: 10px;
+}
+
+.aside .hr-list {
+  font-family: "helvetica medium";
+  font-size: 12px;
+  font-font-weight: 500;
+  color: #313131;
+  height: 25%;
+  margin-right: 10px;
+}
+
+.aside .hr-list hr {
+  border: solid 1px #313131;
+  width: 5px;
+  margin-top: 15px;
+  margin-left: auto;
+}
+
+.aside .hr-list hr:first-child {
+  display: inline-block;
+  width: 10px;
+}
+
+.aside .hr-list span {
+  display: inline-block;
+  line-height: 22.5px;
+}
+
+.aside .hr-list span:last-child {
+  margin-left: 20px;
+}
+
+.aside .scroll {
+  font-family: "helvetica medium";
+  font-size: 14px;
+  font-font-weight: 500;
+  color: #313131;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  position: relative;
+  right: -2em;
+  bottom: 60px;
+}
+
+.header {
+  display: none;
+}
+
+.tall-img {
+  background-image: url("./assets/images/home-tall.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #F5F5F5;
+}
+
+.short-img {
+  background-image: url("./assets/images/home-short2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #F5F5F5;
   background-position-y: 80%;
+  min-height: 200px;
+}
+
+.home-title {
+  font-family: "helvetica medium";
+  font-size: 24px;
+  font-font-weight: 800;
+  color: #313131;
+  padding-left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home-title p {
+  padding-top: 10px;
+}
+
+.home-title p:first-child {
+  padding-top: 50px;
+}
+
+.home-title span {
+  font-family: "helvetica medium";
+  font-size: 14px;
+  font-font-weight: 500;
+  color: #313131;
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    position: relative;
+  }
+  .main .home-title {
+    background-color: #FFFFFF;
+    height: 40%;
+    width: 45%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  .main .short-img {
+    display: none;
+  }
+  .header {
+    font-family: "helvetica bold";
+    font-size: 18px;
+    font-font-weight: 800;
+    color: #313131;
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 2em;
+  }
+  .header p {
+    display: block;
+    width: 5em;
+    border: 1px solid red;
+    overflow: hidden;
+  }
+  .header p:last-child {
+    width: 1em;
+    margin-left: auto;
+    text-align: end;
+  }
+  .tall-img {
+    background-image: url("./assets/images/home-tall.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #F5F5F5;
+  }
+  .short-img {
+    background-image: url("./assets/images/home-short2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #F5F5F5;
+    background-position-y: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    position: relative;
+  }
+  .main .home-title {
+    background-color: #FFFFFF;
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  .main .short-img {
+    display: none;
+  }
+  .header {
+    height: 8vh;
+  }
+  .tall-img {
+    background-image: url("./assets/images/home-tall.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #F5F5F5;
+  }
+  .short-img {
+    background-image: url("./assets/images/home-short2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #F5F5F5;
+    background-position-y: 80%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

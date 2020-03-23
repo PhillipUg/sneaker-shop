@@ -2,6 +2,11 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -31,6 +36,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	overflow: hidden;
 }
 ul {
 	list-style: none;

@@ -2,6 +2,13 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,6 +38,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  overflow: hidden;
 }
 
 ul {
@@ -40,9 +48,33 @@ ul {
 .container {
   display: -ms-grid;
   display: grid;
+  height: 100vh;
+  width: 100vw;
   -ms-grid-columns: 15% 1fr 15%;
       grid-template-columns: 15% 1fr 15%;
-  height: 100vh;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .container .nav {
+    display: none;
+  }
+  .container .aside {
+    display: none;
+  }
+}
+
+.header {
+  display: none;
 }
 
 .main {
@@ -99,32 +131,112 @@ ul {
       grid-template-columns: 70% 1fr 1fr;
 }
 
+@media screen and (max-width: 1024px) {
+  .container {
+    -ms-grid-rows: 8vh 1fr;
+        grid-template-rows: 8vh 1fr;
+  }
+  .main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-row: 2;
+    grid-row: 2;
+        grid-template-areas: 'top-figs top-figs btm-figs btm-figs btm-figs btm-figs' 'top-figs top-figs btm-figs btm-figs btm-figs btm-figs' 'top-figs top-figs btm-figs btm-figs btm-figs btm-figs';
+  }
+  .main .top-figs {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: top-figs;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: column;
+  }
+  .main .btm-figs {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 4;
+    grid-area: btm-figs;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'img img img' 'details details details';
+  }
+  .main .btm-figs .item-details {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: details;
+  }
+  .main .btm-figs .item-img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: img;
+  }
+  .main .btm-figs .item-img article {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    border: 1px solid black;
+  }
+  .main .btm-figs .item-img .prev {
+    display: none;
+  }
+  .main .btm-figs .item-img .next {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'btm-figs';
+  }
+  .main .top-figs {
+    display: none;
+  }
+}
+
 .main .top-figs .cat1 {
-  background-image: url("../../images/cat4.png");
+  background-image: url("../../assets/images/cat4.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
+  background-color: #F5F5F5;
 }
 
 .main .top-figs .cat2 {
-  background-image: url("../../images/cat5.png");
+  background-image: url("../../assets/images/cat5.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
+  background-color: #F5F5F5;
 }
 
 .main .top-figs .cat3 {
-  background-image: url("../../images/cat4.png");
+  background-image: url("../../assets/images/cat4.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
+  background-color: #F5F5F5;
 }
 
 .main .top-figs .cat4 {
-  background-image: url("../../images/cat6.png");
+  background-image: url("../../assets/images/cat6.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
+  background-color: #F5F5F5;
 }
 
 .main .btm-figs .item-details article {
@@ -144,10 +256,11 @@ ul {
 }
 
 .main .btm-figs .item-img .cat5 {
-  background-image: url("../../images/cat6.png");
+  background-image: url("../../assets/images/cat6.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60%;
+  background-color: #F5F5F5;
 }
 
 .main .btm-figs .item-img article {
@@ -155,10 +268,6 @@ ul {
 }
 
 .main .btm-figs .item-img article div:first-child {
-  background-color: #F5F5F5;
-}
-
-.cat {
   background-color: #F5F5F5;
 }
 /*# sourceMappingURL=product.css.map */
