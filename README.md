@@ -4,20 +4,22 @@ A Capstone project is a solo projects at the end of the each of the [Microverse]
 This project inparticular is a real-world-like project, built with real world business specifications. Its based on an online shop for sneakers.
 <br>
 <br>
-## Screenshots of laptop-size screens
+## Screenshots for various screen sizes
 <br>
-<img src="assets/images/sneaker.png" width="300"><img src="assets/images/sneaker1.png" width="300"><img src="assets/images/sneaker2.png" width="300">
+<p float="left">
+ <img src="assets/images/sneaker.png" width="250"> <img src="assets/images/sneaker1.png" width="250"> <img src="assets/images/sneaker2.png" width="250">
+</p>
 <br>
-## Screenshots of phone-size screens
+<p float="left">
+<img src="assets/images/sneaker3.png" width="250"><img src="assets/images/sneaker4.png" width="250"><img src="assets/images/sneaker5.png" width="250">
+ </p>
 <br>
-<img src="assets/images/sneaker3.png" width="300"><img src="assets/images/sneaker4.png" width="300"><img src="assets/images/sneaker5.png" width="300">
-<br>
-## Screenshots of tab-size screens
-<br>
-<img src="assets/images/sneaker6.png" width="300"><img src="assets/images/sneaker7.png" width="300"><img src="assets/images/sneaker8.png" width="300">
+ <p float="left">
+<img src="assets/images/sneaker6.png" width="270"> &nbsp; <img src="assets/images/sneaker7.png" width="270"> &nbsp; &nbsp; <img src="assets/images/sneaker8.png" width="270">
+ </p>
 <br>
 
-In this project, my aim was to build just the appearance of the website and not give it functionality.
+In this project, my aim was to build just the appearance of the website and **NOT** to give it functionality.
 
 ## Built with
   * HTML
