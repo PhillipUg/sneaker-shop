@@ -15,6 +15,13 @@
     family: "helvetica #{$bold-or-medium}";
     size: $size;
     weight: $weight;
-    }
+  }  
   color: $black;
+}
+
+@mixin hover {
+  &:hover {
+      cursor: pointer;
+      color: $grey;
+    }
 }

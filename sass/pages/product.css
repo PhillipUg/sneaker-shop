@@ -25,9 +25,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -43,6 +40,11 @@ body {
 
 ul {
   list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .container {
@@ -210,6 +212,21 @@ ul {
   src: url("./assets/fonts/HelveticaNeueReg.ttf");
 }
 
+@font-face {
+  font-family: "helvetica medium";
+  src: url("../../assets/fonts/HelveticaNeueMed.ttf");
+}
+
+@font-face {
+  font-family: "helvetica bold";
+  src: url("../../assets/fonts/HelveticaNeueCondBold.ttf");
+}
+
+@font-face {
+  font-family: "helvetica regular";
+  src: url("../../assets/fonts/HelveticaNeueReg.ttf");
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,7 +251,7 @@ ul {
 .nav .top-list {
   font-family: "helvetica medium";
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
   color: #313131;
 }
 
@@ -242,11 +259,21 @@ ul {
   padding: 10px 0;
 }
 
+.nav .top-list li:hover {
+  cursor: pointer;
+  color: #B9B9B9;
+}
+
 .nav .menu {
   font-family: "helvetica medium";
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
   color: #313131;
+}
+
+.nav .menu:hover {
+  cursor: pointer;
+  color: #B9B9B9;
 }
 
 .nav .menu .fa-bars {
@@ -254,14 +281,19 @@ ul {
 }
 
 .nav .btm-list {
-  font-family: "helvetica medium";
+  font-family: "helvetica bold";
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 700;
   color: #313131;
 }
 
 .nav .btm-list li {
   padding: 8px 0;
+}
+
+.nav .btm-list li:hover {
+  cursor: pointer;
+  color: #B9B9B9;
 }
 
 .aside {
@@ -302,6 +334,11 @@ ul {
   display: inline-block;
 }
 
+.aside .icons span:hover {
+  cursor: pointer;
+  color: #B9B9B9;
+}
+
 .aside .icons span:last-child {
   text-align: center;
   height: 40px;
@@ -322,9 +359,9 @@ ul {
 }
 
 .aside .hr-list {
-  font-family: "helvetica medium";
+  font-family: "helvetica bold";
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 800;
   color: #313131;
   height: 25%;
   margin-right: 10px;
@@ -352,7 +389,7 @@ ul {
 }
 
 .aside .scroll {
-  font-family: "helvetica medium";
+  font-family: "helvetica bold";
   font-size: 12px;
   font-weight: 500;
   color: #313131;
@@ -368,6 +405,20 @@ ul {
 
 .header {
   display: none;
+}
+
+.aside .aside-back {
+  margin-bottom: auto;
+  margin-top: 80%;
+  font-family: "helvetica medium";
+  font-size: 14px;
+  font-weight: 700;
+  color: #313131;
+}
+
+.aside .aside-back:hover {
+  cursor: pointer;
+  color: #B9B9B9;
 }
 
 .main .top-figs .cat1 {
@@ -416,6 +467,10 @@ ul {
 }
 
 .main .btm-figs .item-img .cat5 span {
+  font-family: "helvetica medium";
+  font-size: 14px;
+  font-weight: 500;
+  color: #313131;
   position: absolute;
   top: 1em;
   right: 2em;
@@ -440,6 +495,11 @@ ul {
   font-size: 14px;
   font-weight: 700;
   color: #313131;
+}
+
+.main .btm-figs .item-img article div:hover {
+  cursor: pointer;
+  color: #B9B9B9;
 }
 
 .main .btm-figs .item-img article div:first-child {
@@ -486,7 +546,7 @@ ul {
 
 .main .btm-figs .item-details .details-title div span:last-child {
   font-family: "helvetica medium";
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 100;
   color: #313131;
   color: #B9B9B9;
@@ -547,7 +607,8 @@ ul {
   font-size: 12px;
   font-weight: 100;
   color: #313131;
-  padding: 1em 3em 0 1em;
+  color: #B9B9B9;
+  padding: 1em 2em 0 1em;
 }
 
 .main .btm-figs .item-details .details-icon {
@@ -560,6 +621,11 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.main .btm-figs .item-details .details-icon:hover {
+  cursor: pointer;
+  color: #B9B9B9;
 }
 
 .main .btm-figs .item-details .details-cart {
@@ -576,6 +642,11 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.main .btm-figs .item-details .details-cart:hover {
+  cursor: pointer;
+  color: #B9B9B9;
 }
 
 @media (max-width: 1024px) {

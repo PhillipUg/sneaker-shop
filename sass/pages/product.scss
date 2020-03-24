@@ -7,6 +7,14 @@
 .header {
   display: none;
 }
+.aside {
+ .aside-back {
+   margin-bottom: auto;
+   margin-top: 80%;
+  @include my-font(medium, 14px, 700);
+  @include hover;
+ }
+}
 .main {
   .top-figs {
     .cat1 {
@@ -34,6 +42,7 @@
         @include bg-img(url('../../assets/images/cat6.png'), 60%);
         position: relative;
         span {
+          @include my-font(medium, 14px, 500);
           position: absolute;
           top: 1em;
           right: 2em;
@@ -48,6 +57,7 @@
           align-items: center;
           justify-content: center;
           @include my-font(bold, 14px, 700);
+          @include hover;
           &:first-child {
             background-color: $light-grey;
           }
@@ -80,7 +90,7 @@
 
             }
             &:last-child {
-              @include my-font(medium, 14px, 100);
+              @include my-font(medium, 12px, 100);
               color: $grey;
             }
           }
@@ -106,32 +116,37 @@
           }
         }
       }
+
       .details-article {
         overflow: hidden;
       }
+
       .details {
         @include my-font(bold, 14px, 700);
         display: inline-block;
         padding-left: 1em;
         margin-top: 1em;
       }
+
       .details-para {
         @include my-font(medium, 12px, 100);
-        
-        padding: 1em 3em 0 1em;
-       
+        color: $grey;
+        padding: 1em 2em 0 1em;
       }
+
       .details-icon {
         display: flex;
         justify-content: center;
         align-items: center;
-       
+        @include hover;
       }
+
       .details-cart {
         @include my-font(bold, 14px, 700);
          display: flex;
         justify-content: center;
         align-items: center;
+        @include hover;
       }
     }
   }

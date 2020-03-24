@@ -19,7 +19,6 @@
 
 .home-title {
   @include my-font(bold, 24px, 800);
-
   padding-left: 50px;
   display: flex;
   flex-direction: column;
@@ -38,6 +37,7 @@
     display: inline-block;
     margin-top: auto;
     margin-bottom: 20px;
+   @include hover;
   }
 }
 

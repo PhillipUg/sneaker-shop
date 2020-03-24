@@ -1,4 +1,4 @@
-@import './variables';
+@import './variables', './mixins';
 
 @font-face {
     font-family: "helvetica medium";
@@ -14,7 +14,21 @@
     font-family: "helvetica regular";
     src: url("./assets/fonts/HelveticaNeueReg.ttf");
   }
+@font-face {
+    font-family: "helvetica medium";
+    src: url("../../assets/fonts/HelveticaNeueMed.ttf");
+  }
 
+@font-face {
+    font-family: "helvetica bold";
+    src: url("../../assets/fonts/HelveticaNeueCondBold.ttf");
+  }
+
+@font-face {
+    font-family: "helvetica regular";
+    src: url("../../assets/fonts/HelveticaNeueReg.ttf");
+  }
+  
 .nav {
   display: flex;
   flex-direction: column;
@@ -24,21 +38,24 @@
   @include my-font(bold, 18px, 800);
   }
   .top-list {
-    @include my-font(medium, 14px, 500);
+    @include my-font(medium, 14px, 700);
   li {
     padding: 10px 0;
+    @include hover;
   }
   }
   .menu {
-    @include my-font(medium, 14px, 500);
+    @include my-font(medium, 14px, 700);
+    @include hover;
     .fa-bars {
       margin-right: 10px;
     }
   }
   .btm-list {
-    @include my-font(medium, 12px, 500);
+    @include my-font(bold, 12px, 700);
     li {
       padding: 8px 0;
+      @include hover;
     }
   }
 }
@@ -58,6 +75,7 @@
     justify-content: space-between;
     span {
       display: inline-block;
+      @include hover;
       &:last-child {
         text-align: center;
         height: 40px;
@@ -77,8 +95,7 @@
     }
   }
   .hr-list {
-    @include my-font(medium, 12px, 500);
-    // border: 1px solid black;
+  @include my-font(bold, 12px, 800);
     height: 25%;
     margin-right: 10px;
     hr {
@@ -100,7 +117,7 @@
     }
   }
   .scroll {
-    @include my-font(medium, 12px, 500);
+    @include my-font(bold, 12px, 500);
 
     transform: rotate(90deg);
     align-self: end;

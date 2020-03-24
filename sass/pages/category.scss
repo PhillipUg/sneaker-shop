@@ -1,6 +1,7 @@
 @import '../base/reset';
 @import '../layout/grid', '../layout/category-grid';
-@import '../utilities/variables', '../utilities/mixins', '../utilities/components';
+@import '../utilities/variables', '../utilities/mixins';
+@import '../utilities/components';
 
 
 .header {
@@ -11,6 +12,7 @@
     display: inline-block;
     margin-left: 1em;
   }
+  
   .icon-bars {
     color: white;
     display: inline-block;
@@ -22,9 +24,15 @@
 .cat {
   @include my-font(medium, 14px, 500);
 
-  min-height: 200px;
+  min-height: 300px;
   min-width: 200px; 
   position: relative;
+  .link {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
   .top-left {
     @include my-font(medium, 12px, 500);
    position: absolute;
@@ -32,12 +40,14 @@
    left: 7%;
   }
   .btm-left {
-   position: absolute;
+    @include my-font(bold, 14px, 700);
+    position: absolute;
     bottom: 7%;
     left: 7%;
   }
   .btm-right {
-   position: absolute;
+    @include my-font(bold, 14px, 700);
+    position: absolute;
     bottom: 7%;
     right: 7%;
   }

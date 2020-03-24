@@ -25,9 +25,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -43,6 +40,11 @@ body {
 
 ul {
   list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .container {
@@ -121,6 +123,21 @@ ul {
   src: url("./assets/fonts/HelveticaNeueReg.ttf");
 }
 
+@font-face {
+  font-family: "helvetica medium";
+  src: url("../../assets/fonts/HelveticaNeueMed.ttf");
+}
+
+@font-face {
+  font-family: "helvetica bold";
+  src: url("../../assets/fonts/HelveticaNeueCondBold.ttf");
+}
+
+@font-face {
+  font-family: "helvetica regular";
+  src: url("../../assets/fonts/HelveticaNeueReg.ttf");
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,7 +162,7 @@ ul {
 .nav .top-list {
   font-family: "helvetica medium";
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
   color: #313131;
 }
 
@@ -153,11 +170,21 @@ ul {
   padding: 10px 0;
 }
 
+.nav .top-list li:hover {
+  cursor: pointer;
+  color: #B9B9B9;
+}
+
 .nav .menu {
   font-family: "helvetica medium";
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
   color: #313131;
+}
+
+.nav .menu:hover {
+  cursor: pointer;
+  color: #B9B9B9;
 }
 
 .nav .menu .fa-bars {
@@ -165,14 +192,19 @@ ul {
 }
 
 .nav .btm-list {
-  font-family: "helvetica medium";
+  font-family: "helvetica bold";
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 700;
   color: #313131;
 }
 
 .nav .btm-list li {
   padding: 8px 0;
+}
+
+.nav .btm-list li:hover {
+  cursor: pointer;
+  color: #B9B9B9;
 }
 
 .aside {
@@ -213,6 +245,11 @@ ul {
   display: inline-block;
 }
 
+.aside .icons span:hover {
+  cursor: pointer;
+  color: #B9B9B9;
+}
+
 .aside .icons span:last-child {
   text-align: center;
   height: 40px;
@@ -233,9 +270,9 @@ ul {
 }
 
 .aside .hr-list {
-  font-family: "helvetica medium";
+  font-family: "helvetica bold";
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 800;
   color: #313131;
   height: 25%;
   margin-right: 10px;
@@ -263,7 +300,7 @@ ul {
 }
 
 .aside .scroll {
-  font-family: "helvetica medium";
+  font-family: "helvetica bold";
   font-size: 12px;
   font-weight: 500;
   color: #313131;
@@ -330,6 +367,11 @@ ul {
   display: inline-block;
   margin-top: auto;
   margin-bottom: 20px;
+}
+
+.home-title span:hover {
+  cursor: pointer;
+  color: #B9B9B9;
 }
 
 @media screen and (max-width: 1024px) {
