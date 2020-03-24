@@ -1,27 +1,25 @@
 @import './variables';
 
-@mixin bg-img($url, $size:100%){
+@mixin bg-img($url, $size: 100%) {
   background: {
-    image: $url;
-    repeat: no-repeat;
-    position: center;
-    size: $size;
     color: $light-grey;
+    image: $url;
+    position: center;
+    repeat: no-repeat;
+    size: $size;
   }
 }
 
-@mixin my-font($bold-or-medium, $size, $weight){
-  font: {
-    family: "helvetica #{$bold-or-medium}";
-    size: $size;
-    weight: $weight;
-  }  
+@mixin my-font($bold-or-medium, $size, $weight) {
   color: $black;
+  font-family: 'helvetica #{$bold-or-medium}', Arial, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
 }
 
 @mixin hover {
   &:hover {
-      cursor: pointer;
-      color: $grey;
-    }
+    color: $grey;
+    cursor: pointer;
+  }
 }

@@ -2,169 +2,188 @@
 @import '../layout/grid', '../layout/product-grid';
 @import '../utilities/variables', '../utilities/mixins', '../utilities/components';
 
-
-
 .header {
   display: none;
 }
+
 .aside {
- .aside-back {
-   margin-bottom: auto;
-   margin-top: 80%;
-  @include my-font(medium, 14px, 700);
-  @include hover;
- }
+  .aside-back {
+    @include my-font(medium, 14px, 700);
+    @include hover;
+
+    margin-bottom: auto;
+    margin-top: 80%;
+  }
 }
-.main {
-  .top-figs {
-    .cat1 {
-      @include bg-img(url('../../assets/images/cat4.png'), 80%);
-    }
 
-    .cat2 {
-      @include bg-img(url('../../assets/images/cat5.png'), 80%);
-    }
+.cat1 {
+  @include bg-img(url('../../assets/images/cat4.png'), 80%);
+}
 
-    .cat3 {
-      @include bg-img(url('../../assets/images/cat4.png'), 80%);
-    }
+.cat2 {
+  @include bg-img(url('../../assets/images/cat5.png'), 80%);
+}
 
-    .cat4 {
-      @include bg-img(url('../../assets/images/cat6.png'), 80%);
-    }
+.cat3 {
+  @include bg-img(url('../../assets/images/cat4.png'), 80%);
+}
+
+.cat4 {
+  @include bg-img(url('../../assets/images/cat6.png'), 80%);
+}
+
+.cat5 {
+  @include bg-img(url('../../assets/images/cat6.png'), 80%);
+
+  position: relative;
+
+  span {
+    @include my-font(medium, 14px, 500);
+
+    position: absolute;
+    right: 2em;
+    top: 1.5em;
+  }
+}
+
+.item-img {
+  text-align: center;
+
+  .img-num {
+    @include my-font(bold, 14px, 500);
+
+    background-color: $light-grey;
+    padding-top: 2em;
   }
 
-  .btm-figs {
-    .item-img {
+  .prev {
+    @include my-font(bold, 14px, 500);
+
+    align-self: center;
+  }
+
+  .next {
+    @include my-font(bold, 14px, 500);
+
+    align-self: center;
+  }
+}
+
+.item-details {
+  article {
+    background-color: $light-grey;
+
+    &:last-child {
       background-color: $white;
 
-      .cat5 {
-        @include bg-img(url('../../assets/images/cat6.png'), 60%);
-        position: relative;
-        span {
-          @include my-font(medium, 14px, 500);
-          position: absolute;
-          top: 1em;
-          right: 2em;
-        }
-      }
-
-      article {
-        background-color: $white;
-        text-align: center;
-        div {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          @include my-font(bold, 14px, 700);
-          @include hover;
-          &:first-child {
-            background-color: $light-grey;
-          }
-        }
-      }
-    }
-
-    .item-details {
-      article {
+      div {
         background-color: $light-grey;
-
-        &:last-child {
-          background-color: $white;
-
-          div {
-            background-color: $light-grey;
-          }
-        }
-      }
-      .details-title {
-        display: flex;
-        div {
-          padding-left: 1em;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          span {
-            &:first-child{
-              @include my-font(bold, 14px, 700);
-
-            }
-            &:last-child {
-              @include my-font(medium, 12px, 100);
-              color: $grey;
-            }
-          }
-        }
-        .price {
-          @include my-font(bold, 14px, 700);
-          margin: auto 0.8em;
-          margin-left: auto;
-        }
-      }
-      .details-list {
-        @include my-font(bold, 14px, 700);
-        color: $grey;
-        display: flex;
-        text-align: center;
-        align-items: center;
-        height: 100%;
-        li{
-          flex: 1;
-          display: inline-block;
-          &:nth-child(4){
-            color: $black;
-          }
-        }
-      }
-
-      .details-article {
-        overflow: hidden;
-      }
-
-      .details {
-        @include my-font(bold, 14px, 700);
-        display: inline-block;
-        padding-left: 1em;
-        margin-top: 1em;
-      }
-
-      .details-para {
-        @include my-font(medium, 12px, 100);
-        color: $grey;
-        padding: 1em 2em 0 1em;
-      }
-
-      .details-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @include hover;
-      }
-
-      .details-cart {
-        @include my-font(bold, 14px, 700);
-         display: flex;
-        justify-content: center;
-        align-items: center;
-        @include hover;
       }
     }
   }
 }
 
-@media (max-width:1024px){
-  .header {
+.details-title {
   display: flex;
+}
+
+.price {
+  @include my-font(bold, 14px, 700);
+
+  margin: auto 0.8em;
+  margin-left: auto;
+}
+
+.details-list {
+  @include my-font(bold, 14px, 700);
+
   align-items: center;
-  .logo {
-    @include my-font(bold, 18px, 800);
+  color: $grey;
+  display: flex;
+  height: 100%;
+  text-align: center;
+
+  li {
     display: inline-block;
-    margin-left: 1em;
-  }
-  .icon-bars {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: 1em;
+    flex: 1;
+
+    &:nth-child(4) {
+      color: $black;
+    }
   }
 }
+
+.title-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 1em;
+
+  span {
+    &:first-child {
+      @include my-font(bold, 14px, 700);
+    }
+
+    &:last-child {
+      @include my-font(medium, 12px, 100);
+
+      color: $grey;
+    }
+  }
+}
+
+.details-article {
+  overflow: hidden;
+}
+
+.details {
+  @include my-font(bold, 14px, 700);
+
+  display: inline-block;
+  margin-top: 1em;
+  padding-left: 1em;
+}
+
+.details-para {
+  @include my-font(medium, 12px, 100);
+
+  color: $grey;
+  padding: 1em 2em 0 1em;
+}
+
+.details-icon {
+  @include hover;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.details-cart {
+  @include my-font(bold, 14px, 700);
+  @include hover;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    align-items: center;
+    display: flex;
+
+    .logo {
+      @include my-font(bold, 18px, 800);
+
+      display: inline-block;
+      margin-left: 1em;
+    }
+
+    .icon-bars {
+      display: inline-block;
+      margin-left: auto;
+      margin-right: 1em;
+    }
+  }
 }

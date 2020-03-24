@@ -3,18 +3,19 @@
 @import '../utilities/variables', '../utilities/mixins';
 @import '../utilities/components';
 
-
 .header {
-  display: flex;
   align-items: center;
+  display: flex;
+
   .logo {
     @include my-font(bold, 18px, 800);
+
     display: inline-block;
     margin-left: 1em;
   }
-  
+
   .icon-bars {
-    color: white;
+    color: $white;
     display: inline-block;
     margin-left: auto;
     margin-right: 1em;
@@ -25,30 +26,37 @@
   @include my-font(medium, 14px, 500);
 
   min-height: 300px;
-  min-width: 200px; 
+  min-width: 200px;
   position: relative;
+
   .link {
     display: block;
-    position: absolute;
     height: 100%;
+    position: absolute;
     width: 100%;
   }
+
   .top-left {
     @include my-font(medium, 12px, 500);
-   position: absolute;
-   top: 7%;
-   left: 7%;
+
+    left: 7%;
+    position: absolute;
+    top: 7%;
   }
+
   .btm-left {
     @include my-font(bold, 14px, 700);
-    position: absolute;
+
     bottom: 7%;
     left: 7%;
+    position: absolute;
   }
+
   .btm-right {
     @include my-font(bold, 14px, 700);
-    position: absolute;
+
     bottom: 7%;
+    position: absolute;
     right: 7%;
   }
 }
@@ -77,8 +85,8 @@
   @include bg-img(url('../../assets/images/cat9.png'), 50%);
 }
 
-@media (max-width:1024px){
+@media (max-width: 1024px) {
   .fa-bars {
-    color: black;
+    color: $black;
   }
 }
