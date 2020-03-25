@@ -18,8 +18,8 @@
   --black: #313131;
   --bold-font: "helvetica bold", Arial, sans-serif;
   --medium-font: "helvetica medium", Arial, sans-serif;
-  --light-grey:#f5f5f5;
-  --grey:#b9b9b9;
+  --light-grey: #f5f5f5;
+  --grey: #b9b9b9;
   --white: #fff;
 }
 
@@ -41,7 +41,7 @@ details,
 figure,
 header,
 nav,
-section{
+section {
   border: 0;
   margin: 0;
   padding: 0;
@@ -295,15 +295,16 @@ a {
   color: var(--grey);
   cursor: pointer;
 }
+
 .cat {
- background-color: var(--light-grey);
- background-position: center;
+  background-color: var(--light-grey);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 80%;
 }
 
-.cat1 { 
-  background-image: url("../assets/images/cat4.png");  
+.cat1 {
+  background-image: url("../assets/images/cat4.png");
 }
 
 .cat2 {
@@ -464,11 +465,10 @@ a {
   cursor: pointer;
 }
 
-
 @media screen and (max-width: 1024px) {
   .container {
     grid-template-rows: 8vh 1fr;
-     grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     height: 100vh;
     width: 100vw;
   }
@@ -510,14 +510,15 @@ a {
     display: none;
   }
 
-.nav {
+  .nav {
     display: none;
   }
 
   .aside {
     display: none;
   }
-    .header {
+
+  .header {
     align-items: center;
     display: flex;
   }
@@ -535,8 +536,9 @@ a {
 
 @media screen and (max-width: 768px) {
   .main {
-    grid-template-columns: 1fr;  
+    grid-template-columns: 1fr;
   }
+
   .top-figs {
     display: none;
   }
