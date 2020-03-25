@@ -52,6 +52,9 @@ Give a :star: if you like this project!
 
 ## Acknowledgements
   * [Microverse](https://www.microverse.org/)
+  * The original designer of this great idea of a website is [Dima Oxygen](https://www.behance.net/dimaoxygen)
+  * I got the images of the sneakers from:
+    - [Amazon](https://www.amazon.com/)
   
 ## License
  Distributed under the MIT License.
