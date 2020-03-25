@@ -394,7 +394,7 @@ a {
 
 .home-title {
   font-family: "helvetica bold", Arial, sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 800;
   color: #313131;
   display: -webkit-box;
@@ -407,11 +407,11 @@ a {
   padding-left: 50px;
 }
 
-.home-title p {
+.home-title h1 {
   padding-top: 10px;
 }
 
-.home-title p:first-child {
+.home-title h1:first-child {
   padding-top: 50px;
 }
 
