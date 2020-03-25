@@ -8,6 +8,8 @@
 
 .tall-img {
   @include bg-img(url('../../assets/images/home-tall.jpg'), cover);
+
+  grid-row: span 2;
 }
 
 .short-img {
@@ -31,15 +33,15 @@
       padding-top: 50px;
     }
   }
+}
 
-  span {
-    @include my-font(medium, 14px, 500);
-    @include hover;
+.shop-now {
+  @include my-font(medium, 14px, 500);
+  @include hover;
 
-    display: inline-block;
-    margin-bottom: 20px;
-    margin-top: auto;
-  }
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: auto;
 }
 
 @media screen and (max-width: 1024px) {
@@ -63,65 +65,28 @@
     }
   }
 
-  .short-img {
-    @include bg-img(url('../../assets/images/home-short2.jpg'), cover);
-
-    background-position-y: 80%;
-  }
-
   .main {
     position: relative;
-
-    .home-title {
-      background-color: $white;
-      bottom: 0;
-      height: 40%;
-      position: absolute;
-      right: 0;
-      width: 45%;
-      z-index: 1;
-    }
-
-    .short-img {
-      display: none;
-    }
   }
 
-  .tall-img {
-    @include bg-img(url('../../assets/images/home-tall.jpg'), cover);
+  .home-title {
+    background-color: $white;
+    bottom: 0;
+    height: 40%;
+    position: absolute;
+    right: 0;
+    width: 45%;
+    z-index: 1;
+  }
+
+  .short-img {
+    display: none;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .short-img {
-    @include bg-img(url('../../assets/images/home-short2.jpg'), cover);
-
-    background-position-y: 80%;
-  }
-
-  .main {
-    position: relative;
-
-    .home-title {
-      background-color: $white;
-      bottom: 0;
-      height: 30%;
-      position: absolute;
-      right: 0;
-      width: 100%;
-      z-index: 1;
-    }
-
-    .short-img {
-      display: none;
-    }
-  }
-
-  .header {
-    height: 8vh;
-  }
-
-  .tall-img {
-    @include bg-img(url('../../assets/images/home-tall.jpg'), cover);
+  .home-title {
+    height: 30%;
+    width: 100%;
   }
 }

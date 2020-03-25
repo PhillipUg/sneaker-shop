@@ -10,11 +10,11 @@
   }
 }
 
-@mixin my-font($bold-or-medium, $size, $weight) {
-  color: $black;
+@mixin my-font($bold-or-medium, $size, $weight, $color:$black) {
   font-family: 'helvetica #{$bold-or-medium}', Arial, sans-serif;
   font-size: $size;
   font-weight: $weight;
+  color: $color;
 }
 
 @mixin hover {

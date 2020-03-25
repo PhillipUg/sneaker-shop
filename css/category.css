@@ -163,11 +163,7 @@ a {
   overflow: hidden;
 }
 
-.main .header {
-  grid-column: 1 / -1;
-}
-
-.main .main-items {
+.main-items {
   display: -ms-grid;
   display: grid;
   grid-gap: 3px;
@@ -177,51 +173,33 @@ a {
   scrollbar-width: none;
 }
 
-.main .main-items::-webkit-scrollbar {
+.main-items::-webkit-scrollbar {
   display: none;
 }
 
 @media screen and (max-width: 1024px) {
   .main {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
     -ms-grid-rows: 7vh 1fr;
     grid-template-rows: 7vh 1fr;
   }
 
-  .main .main-items {
+  .main-items {
     display: -ms-grid;
     display: grid;
-    grid-gap: 3px;
     -ms-grid-row: 2;
     grid-row: 2;
     -ms-grid-columns: (1fr) [2];
     grid-template-columns: repeat(2, 1fr);
-    overflow-y: scroll;
-    scrollbar-width: none;
-  }
-
-  .main .main-items::-webkit-scrollbar {
-    display: none;
-  }
-
-  .main .header {
-    -ms-grid-row: 1;
-    grid-row: 1;
   }
 }
 
 @media screen and (max-width: 768px) {
   .main {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 
-  .main .main-items {
+  .main-items {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
@@ -233,17 +211,12 @@ a {
 
 @font-face {
   font-family: 'helvetica medium';
-  src: url("../../assets/fonts/HelveticaNeueMed.ttf");
+  src: url("../assets/fonts/HelveticaNeueMed.ttf");
 }
 
 @font-face {
   font-family: 'helvetica bold';
-  src: url("../../assets/fonts/HelveticaNeueCondBold.ttf");
-}
-
-@font-face {
-  font-family: 'helvetica regular';
-  src: url("../../assets/fonts/HelveticaNeueReg.ttf");
+  src: url("../assets/fonts/HelveticaNeueCondBold.ttf");
 }
 
 .nav {
@@ -260,59 +233,59 @@ a {
   padding: 2em 0 2em 2em;
 }
 
-.nav .logo {
-  color: #313131;
+.logo {
   font-family: "helvetica bold", Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
-}
-
-.nav .top-list {
   color: #313131;
-  font-family: "helvetica medium", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
 }
 
-.nav .top-list li {
-  padding: 10px 0;
-}
-
-.nav .top-list li:hover {
-  color: #b9b9b9;
-  cursor: pointer;
-}
-
-.nav .menu {
-  color: #313131;
-  font-family: "helvetica medium", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.nav .menu:hover {
-  color: #b9b9b9;
-  cursor: pointer;
-}
-
-.nav .menu .fa-bars {
-  margin-right: 10px;
-}
-
-.nav .btm-list {
-  color: #313131;
+.btm-list {
   font-family: "helvetica bold", Arial, sans-serif;
   font-size: 12px;
   font-weight: 700;
+  color: #313131;
 }
 
-.nav .btm-list li {
+.btm-list-item {
   padding: 8px 0;
 }
 
-.nav .btm-list li:hover {
+.btm-list-item:hover {
   color: #b9b9b9;
   cursor: pointer;
+}
+
+.top-list {
+  font-family: "helvetica medium", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #313131;
+}
+
+.top-list-item {
+  padding: 10px 0;
+}
+
+.top-list-item:hover {
+  color: #b9b9b9;
+  cursor: pointer;
+}
+
+.menu {
+  font-family: "helvetica medium", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #313131;
+}
+
+.menu:hover {
+  color: #b9b9b9;
+  cursor: pointer;
+}
+
+.fa-bars {
+  margin-right: 10px;
 }
 
 .aside {
@@ -331,29 +304,11 @@ a {
   text-align: right;
 }
 
-.aside div span {
-  display: inline-block;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  line-height: 22.5px;
-  margin-top: 5px;
-  text-align: center;
-}
-
-.aside div:first-child {
-  width: 100%;
-}
-
-.aside div:last-child {
-  margin-left: 20px;
-}
-
-.aside .icons {
-  color: #313131;
+.icons {
   font-family: "helvetica medium", Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
+  color: #313131;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,16 +323,16 @@ a {
   margin-top: 2em;
 }
 
-.aside .icons span {
+.icons span {
   display: inline-block;
 }
 
-.aside .icons span:hover {
+.icons span:hover {
   color: #b9b9b9;
   cursor: pointer;
 }
 
-.aside .icons span:last-child {
+.icons span:last-child {
   background-color: #313131;
   border-radius: 50%;
   color: #fff;
@@ -388,19 +343,19 @@ a {
   width: 40px;
 }
 
-.aside .icons .fa-search {
+.fa-search {
   margin-right: 10px;
 }
 
-.aside .icons .fa-user {
+.fa-user {
   margin-right: 10px;
 }
 
-.aside .hr-list {
-  color: #313131;
+.hr-list {
   font-family: "helvetica bold", Arial, sans-serif;
   font-size: 12px;
   font-weight: 800;
+  color: #313131;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -413,23 +368,31 @@ a {
   margin-top: 80%;
 }
 
-.aside hr {
+.hr-num {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.hr-items {
   border: solid 1px #313131;
   margin-left: auto;
   margin-top: 15px;
   width: 5px;
 }
 
-.aside hr:first-child {
+.hr-items:first-child {
   display: inline-block;
   width: 10px;
 }
 
-.aside .scroll {
-  color: #313131;
+.scroll {
   font-family: "helvetica bold", Arial, sans-serif;
   font-size: 12px;
   font-weight: 500;
+  color: #313131;
   -ms-flex-item-align: end;
   -ms-grid-row-align: end;
   align-self: end;
@@ -449,16 +412,7 @@ a {
   display: flex;
 }
 
-.header .logo {
-  color: #313131;
-  font-family: "helvetica bold", Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  display: inline-block;
-  margin-left: 1em;
-}
-
-.header .icon-bars {
+.icon-bars {
   color: #fff;
   display: inline-block;
   margin-left: auto;
@@ -466,47 +420,47 @@ a {
 }
 
 .cat {
-  color: #313131;
   font-family: "helvetica medium", Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
+  color: #313131;
   min-height: 300px;
   min-width: 200px;
   position: relative;
 }
 
-.cat .link {
+.link {
   display: block;
   height: 100%;
   position: absolute;
   width: 100%;
 }
 
-.cat .top-left {
-  color: #313131;
+.top-left {
   font-family: "helvetica medium", Arial, sans-serif;
   font-size: 12px;
   font-weight: 500;
+  color: #313131;
   left: 7%;
   position: absolute;
   top: 7%;
 }
 
-.cat .btm-left {
-  color: #313131;
+.btm-left {
   font-family: "helvetica bold", Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
+  color: #313131;
   bottom: 7%;
   left: 7%;
   position: absolute;
 }
 
-.cat .btm-right {
-  color: #313131;
+.btm-right {
   font-family: "helvetica bold", Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
+  color: #313131;
   bottom: 7%;
   position: absolute;
   right: 7%;
@@ -514,7 +468,7 @@ a {
 
 .cat1 {
   background-color: #f5f5f5;
-  background-image: url("../../assets/images/cat1.png");
+  background-image: url("../assets/images/cat1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -522,7 +476,7 @@ a {
 
 .cat2 {
   background-color: #f5f5f5;
-  background-image: url("../../assets/images/cat2.png");
+  background-image: url("../assets/images/cat2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -530,7 +484,7 @@ a {
 
 .cat3 {
   background-color: #f5f5f5;
-  background-image: url("../../assets/images/cat3.png");
+  background-image: url("../assets/images/cat3.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -538,7 +492,7 @@ a {
 
 .cat4 {
   background-color: #f5f5f5;
-  background-image: url("../../assets/images/cat10.png");
+  background-image: url("../assets/images/cat10.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -546,7 +500,7 @@ a {
 
 .cat5 {
   background-color: #f5f5f5;
-  background-image: url("../../assets/images/cat8.png");
+  background-image: url("../assets/images/cat8.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -554,7 +508,7 @@ a {
 
 .cat6 {
   background-color: #f5f5f5;
-  background-image: url("../../assets/images/cat9.png");
+  background-image: url("../assets/images/cat9.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -563,5 +517,10 @@ a {
 @media (max-width: 1024px) {
   .fa-bars {
     color: #313131;
+  }
+
+  .logo--margin {
+    display: inline-block;
+    margin-left: 1em;
   }
 }

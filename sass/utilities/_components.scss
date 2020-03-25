@@ -20,39 +20,39 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 2em 0 2em 2em;
+}
 
-  .logo {
-    @include my-font(bold, 18px, 800);
-  }
+.logo {
+  @include my-font(bold, 18px, 800);
+}
 
-  .top-list {
-    @include my-font(medium, 14px, 700);
+.btm-list {
+  @include my-font(bold, 12px, 700);
+}
 
-    li {
-      @include hover;
+.btm-list-item {
+  @include hover;
 
-      padding: 10px 0;
-    }
-  }
+  padding: 8px 0;
+}
 
-  .menu {
-    @include my-font(medium, 14px, 700);
-    @include hover;
+.top-list {
+  @include my-font(medium, 14px, 700);
+}
 
-    .fa-bars {
-      margin-right: 10px;
-    }
-  }
+.top-list-item {
+  @include hover;
 
-  .btm-list {
-    @include my-font(bold, 12px, 700);
+  padding: 10px 0;
+}
 
-    li {
-      @include hover;
+.menu {
+  @include my-font(medium, 14px, 700);
+  @include hover;
+}
 
-      padding: 8px 0;
-    }
-  }
+.fa-bars {
+  margin-right: 10px;
 }
 
 .aside {
@@ -62,90 +62,79 @@
   padding-right: 1.5em;
   position: relative;
   text-align: right;
+}
 
-  div {
-    span {
-      display: inline-block;
-      justify-content: center;
-      line-height: 22.5px;
-      margin-top: 5px;
-      text-align: center;
-    }
+.icons {
+  @include my-font(medium, 14px, 500);
 
-    &:first-child {
-      width: 100%;
-    }
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  justify-content: space-between;
+  margin-top: 2em;
+
+  span {
+    @include hover;
+
+    display: inline-block;
 
     &:last-child {
+      background-color: $black;
+      border-radius: 50%;
+      color: $white;
+      height: 40px;
+      line-height: 40px;
       margin-left: 20px;
+      text-align: center;
+      width: 40px;
     }
   }
+}
 
-  .icons {
-    @include my-font(medium, 14px, 500);
+.fa-search {
+  margin-right: 10px;
+}
 
-    display: flex;
-    flex-direction: column;
-    height: 20%;
-    justify-content: space-between;
-    margin-top: 2em;
+.fa-user {
+  margin-right: 10px;
+}
 
-    span {
-      @include hover;
+.hr-list {
+  @include my-font(bold, 12px, 800);
 
-      display: inline-block;
+  display: flex;
+  height: 25%;
+  justify-content: flex-end;
+  margin-bottom: auto;
+  margin-right: 10px;
+  margin-top: 80%;
+}
 
-      &:last-child {
-        background-color: $black;
-        border-radius: 50%;
-        color: $white;
-        height: 40px;
-        line-height: 40px;
-        margin-left: 20px;
-        text-align: center;
-        width: 40px;
-      }
-    }
+.hr-num {
+  // border: 1px solid red;
+  width: 50%;
+  display: flex;
+  margin-top: 10px;
+}
 
-    .fa-search {
-      margin-right: 10px;
-    }
+.hr-items {
+  border: solid 1px $black;
+  margin-left: auto;
+  margin-top: 15px;
+  width: 5px;
 
-    .fa-user {
-      margin-right: 10px;
-    }
+  &:first-child {
+    display: inline-block;
+    width: 10px;
   }
+}
 
-  .hr-list {
-    @include my-font(bold, 12px, 800);
+.scroll {
+  @include my-font(bold, 12px, 500);
 
-    display: flex;
-    height: 25%;
-    justify-content: flex-end;
-    margin-bottom: auto;
-    margin-right: 10px;
-    margin-top: 80%;
-  }
-
-  hr {
-    border: solid 1px $black;
-    margin-left: auto;
-    margin-top: 15px;
-    width: 5px;
-
-    &:first-child {
-      display: inline-block;
-      width: 10px;
-    }
-  }
-
-  .scroll {
-    @include my-font(bold, 12px, 500);
-
-    align-self: end;
-    bottom: 60px;
-    position: absolute;
-    right: 1em;
-    transform: rotate(90deg);
-  }
+  align-self: end;
+  bottom: 60px;
+  position: absolute;
+  right: 1em;
+  transform: rotate(90deg);
 }

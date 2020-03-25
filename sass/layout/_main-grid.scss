@@ -1,17 +1,9 @@
 @import '../utilities/variables';
 
-.header {
-  display: none;
-}
-
 .main {
   display: grid;
   grid-gap: $grid-gap;
   grid-template-columns: 1fr 1fr;
-
-  .tall-img {
-    grid-row: span 2;
-  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -21,8 +13,6 @@
   }
 
   .main {
-    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 30%;
   }
 }

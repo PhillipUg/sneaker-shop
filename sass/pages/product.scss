@@ -6,14 +6,12 @@
   display: none;
 }
 
-.aside {
-  .aside-back {
-    @include my-font(medium, 14px, 700);
-    @include hover;
+.aside-back {
+  @include my-font(medium, 14px, 700);
+  @include hover;
 
-    margin-bottom: auto;
-    margin-top: 80%;
-  }
+  margin-bottom: auto;
+  margin-top: 80%;
 }
 
 .cat1 {
@@ -36,50 +34,38 @@
   @include bg-img(url('../../assets/images/cat6.png'), 80%);
 
   position: relative;
-
-  span {
-    @include my-font(medium, 14px, 500);
-
-    position: absolute;
-    right: 2em;
-    top: 1.5em;
-  }
 }
 
-.item-img {
-  text-align: center;
+.cat5-top-right {
+  @include my-font(medium, 14px, 500);
 
-  .img-num {
-    @include my-font(bold, 14px, 500);
+  position: absolute;
+  right: 2em;
+  top: 1.5em;
+}
 
-    background-color: $light-grey;
-    padding-top: 2em;
-  }
+.img-num {
+  @include my-font(bold, 14px, 500);
 
-  .prev {
-    @include my-font(bold, 14px, 500);
+  background-color: $light-grey;
+  padding-top: 2em;
+}
 
-    align-self: center;
-  }
+.prev {
+  @include my-font(bold, 14px, 500);
 
-  .next {
-    @include my-font(bold, 14px, 500);
+  align-self: center;
+}
 
-    align-self: center;
-  }
+.next {
+  @include my-font(bold, 14px, 500);
+
+  align-self: center;
 }
 
 .item-details {
   article {
     background-color: $light-grey;
-
-    &:last-child {
-      background-color: $white;
-
-      div {
-        background-color: $light-grey;
-      }
-    }
   }
 }
 
@@ -95,21 +81,20 @@
 }
 
 .details-list {
-  @include my-font(bold, 14px, 700);
+  @include my-font(bold, 14px, 700, $grey);
 
   align-items: center;
-  color: $grey;
   display: flex;
   height: 100%;
   text-align: center;
+}
 
-  li {
-    display: inline-block;
-    flex: 1;
+.shoe-size {
+  display: inline-block;
+  flex: 1;
 
-    &:nth-child(4) {
-      color: $black;
-    }
+  &:nth-child(4) {
+    color: $black;
   }
 }
 
@@ -125,9 +110,7 @@
     }
 
     &:last-child {
-      @include my-font(medium, 12px, 100);
-
-      color: $grey;
+      @include my-font(medium, 12px, 100, $grey);
     }
   }
 }
@@ -145,9 +128,8 @@
 }
 
 .details-para {
-  @include my-font(medium, 12px, 100);
+  @include my-font(medium, 12px, 100, $grey);
 
-  color: $grey;
   padding: 1em 2em 0 1em;
 }
 
@@ -168,22 +150,22 @@
   justify-content: center;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .header {
     align-items: center;
     display: flex;
+  }
 
-    .logo {
-      @include my-font(bold, 18px, 800);
+  .logo {
+    @include my-font(bold, 18px, 800);
 
-      display: inline-block;
-      margin-left: 1em;
-    }
+    display: inline-block;
+    margin-left: 1em;
+  }
 
-    .icon-bars {
-      display: inline-block;
-      margin-left: auto;
-      margin-right: 1em;
-    }
+  .icon-bars {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 1em;
   }
 }

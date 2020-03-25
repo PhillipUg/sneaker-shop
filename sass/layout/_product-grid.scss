@@ -1,49 +1,44 @@
 @import '../utilities/variables';
 
-.header {
-  display: none;
-}
-
 .main {
   display: grid;
   grid-gap: $grid-gap;
   grid-template-rows: 30% 1fr;
+}
 
-  .top-figs {
+.top-figs {
+  display: grid;
+  grid-gap: $grid-gap;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btm-figs {
+  display: grid;
+  grid-gap: $grid-gap;
+  grid-template-columns: 33% 1fr;
+}
+
+.item-img {
+  display: grid;
+  grid-template-rows: 85% 1fr;
+  text-align: center;
+
+  article {
     display: grid;
-    grid-gap: $grid-gap;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 70% 1fr 1fr;
   }
+}
 
-  .btm-figs {
-    display: grid;
-    grid-gap: $grid-gap;
-    grid-template-columns: 33% 1fr;
+.item-details {
+  display: grid;
+  grid-gap: $grid-gap;
+  grid-template-rows: 20% 15% 1fr 14%;
+}
 
-    .item-img {
-      display: grid;
-      grid-template-rows: 85% 1fr;
-
-      article {
-        display: grid;
-        grid-template-columns: 70% 1fr 1fr;
-      }
-    }
-
-    .item-details {
-      display: grid;
-      grid-gap: $grid-gap;
-      grid-template-rows: 20% 15% 1fr 14%;
-
-      article {
-        &:last-child {
-          display: grid;
-          grid-gap: $grid-gap;
-          grid-template-columns: 20% 1fr;
-        }
-      }
-    }
-  }
+.add-to-cart {
+  display: grid;
+  grid-gap: $grid-gap;
+  grid-template-columns: 20% 1fr;
 }
 
 @media screen and (max-width: 1024px) {
@@ -56,37 +51,36 @@
     grid-row: 2;
     grid-template-columns: 35% 1fr;
     grid-template-rows: 1fr;
+  }
 
-    .top-figs {
-      // grid-area: top-figs;
+  .top-figs {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .btm-figs {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 1fr;
+  }
+
+  .item-img {
+    grid-row: 1;
+
+    article {
       display: grid;
-      grid-auto-flow: column;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, 1fr);
     }
+  }
 
-    .btm-figs {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 50% 1fr;
+  .prev {
+    display: none;
+  }
 
-      .item-img {
-        grid-row: 1;
-
-        article {
-          display: grid;
-          grid-template-columns: 1fr;
-        }
-
-        .prev {
-          display: none;
-        }
-
-        .next {
-          display: none;
-        }
-      }
-    }
+  .next {
+    display: none;
   }
 }
 
@@ -95,9 +89,9 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+  }
 
-    .top-figs {
-      display: none;
-    }
+  .top-figs {
+    display: none;
   }
 }
