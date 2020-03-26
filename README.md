@@ -28,6 +28,9 @@ In this project, my aim was to build just the appearance of the website and **NO
 ## Live demo
 [Live Demo Link](https://raw.githack.com/PhillipUg/sneaker-shop/sneaker-shop/index.html)
 
+## Video demo
+[Video Demo Link](https://www.loom.com/share/531f5ff9adfe434dbf432b4219c04bf2)
+
 ## Author
 
  :bust_in_silhouette:
