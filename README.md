@@ -36,7 +36,7 @@ In this project, my aim was to build just the appearance of the website and **NO
  :bust_in_silhouette:
  * Github: https://github.com/PhillipUg
  * Twitter: https://twitter.com/Phillip_Ug
- * LinkedIn: https://www.linkedin.com/in/phillip-musiime-74657019a/
+ * LinkedIn: https://www.linkedin.com/in/phillip-musiime
 
 
 ## Contributing
